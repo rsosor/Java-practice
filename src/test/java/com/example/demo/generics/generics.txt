@@ -1,0 +1,40 @@
+<T extends Enum<T> & MyInterface>
+<T extends Enum<? extends MyInterface>>
+
+the same
+
+________________________________________________________________________________________________________________________
+interface MyInterface {
+    void someMethod();
+}
+
+enum MyEnumA implements MyInterface {
+    A, B, C;
+    public void someMethod() {}
+}
+
+enum MyEnumB implements MyInterface {
+    X, Y, Z;
+    public void someMethod() {}
+}
+________________________________________________________________________________________________________________________
+
+And I want to require that an implementation uses not only a MyInterface but also that it is an enum. The "standard" way
+is by an intersection bound:
+
+static class MyIntersectionClass<T extends Enum<T> & MyInterface> {
+    void use(T t) {}
+}
+
+But I've discovered that this is also works:
+
+static class MyWildcardClass<T extends Enum<? extends MyInterface>> {
+    void use(T t) {}
+}
+________________________________________________________________________________________________________________________
+interface EnhancedEnum<E extends Enum<E> & EnhancedEnum<E, V>, V>
+
+This means that E have to be an enum and an implementation of EnhancedEnum of E(the enum) and V.
+V can be whatever in this case.
+
+________________________________________________________________________________________________________________________

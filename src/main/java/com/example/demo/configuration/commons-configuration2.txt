@@ -1,0 +1,14 @@
+除支持佔位符，還支持取值一些內置的變量。如環境變量、環境屬性。
+它 內置 三個屬性前缀
+1. sys: 對應我們熟悉的 systemProperties
+2. env: 對應我們熟悉的 environmentProperties
+3. const: The const prefix indicates that a variable is to be interpreted as a constant member field of a class
+(i.e. a field with the static final modifiers.) The name of the variable must be of the form
+    <full qualified class name>.<field name> The specified class will be loaded and the value of this field will be obtained.
+
+使用案例：
+user.file = ${sys:user.home}/settings.xml
+java.home = ${env:JAVA_HOME}
+
+# 可以理解為直接引用某個類的靜態常量
+action.key = ${const:java.awt.event.KeyEvent.VK_CANCEL}
