@@ -50,6 +50,7 @@ public class PropertiesUtils {
         /**
          * 為了對比，此處使用 Spring 提供的 PropertiesLoaderUtils 工具：
          * public static void main(String[] args) throws ConfigurationException, IOException {
+         *     // Spring 也是支持很友好的編碼解決
          *     Properties properties = PropertiesLoaderUtils.loadProperties(new EncodedResource(
          *     new ClassPathResource("my.properties"), StandardCharsets.UTF-8));
          *     System.out.println(properties);
@@ -57,5 +58,13 @@ public class PropertiesUtils {
          * 但是它並不支持「佔位符」且不能使用「系統屬性」或者「環境變量」
          */
 
+        /**
+         * 關於 properties 文件的寫入
+         * 向裡面設置 K-V，最終寫進文件裡持久化。具體寫入邏輯和中文亂碼處理暫略，絕大多數情況只需要讀取。
+         *
+         * // set 保存在內存，還沒有持久化
+         * Configuration config = configs.properties("my.properties");
+         * config.setProperty("dev", "dev");
+         */
     }
 }

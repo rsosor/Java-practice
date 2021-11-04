@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: mydemoshow::${person.name}
+
+person:
+  name: fsx
+  age: 10

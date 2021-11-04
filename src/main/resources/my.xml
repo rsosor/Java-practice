@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <token>
+        <device>
+            <validate>true</validate>
+        </device>
+        <person>
+            <validate>true</validate>
+            <expire description="人員令牌失效時間(分鐘)">60</expire>
+        </person>
+    </token>
+</configuration>
