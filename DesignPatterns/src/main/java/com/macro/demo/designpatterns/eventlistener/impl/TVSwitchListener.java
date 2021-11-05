@@ -1,4 +1,7 @@
-package com.macro.demo.designpatterns.eventlistener;
+package com.macro.demo.designpatterns.eventlistener.impl;
+
+import com.macro.demo.designpatterns.eventlistener.ISwitchListener;
+import com.macro.demo.designpatterns.eventlistener.SwitchEvent;
 
 public class TVSwitchListener implements ISwitchListener {
 
