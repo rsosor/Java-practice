@@ -1,25 +1,22 @@
 package com.macro.demo.designpatterns.decoratorpattern;
 
-import com.macro.demo.designpatterns.decoratorpattern.sub.BusinessLunch;
-import com.macro.demo.designpatterns.decoratorpattern.sub.sub.SimpleCombo;
-import com.macro.demo.designpatterns.decoratorpattern.sub.sub.sub.FullCombo;
+import com.macro.demo.designpatterns.decoratorpattern.sub.sub.Drink;
+import com.macro.demo.designpatterns.decoratorpattern.sub.sub.MainMeal;
+import com.macro.demo.designpatterns.decoratorpattern.sub.sub.Soup;
 
 public class Test {
 
     public static void main(String[] args) {
+        Order order = new Order();
 
-        Restaurant restaurant = new Restaurant();
+        Drink drink = new Drink();
+        MainMeal mainMeal = new MainMeal();
+        Soup soup = new Soup();
 
-        SimpleCombo simpleCombo = new SimpleCombo(restaurant);
-        System.out.println("簡餐: ");
-        simpleCombo.order();
+        drink.decorate(order);
+        mainMeal.decorate(drink);
+        soup.decorate(mainMeal);
 
-        BusinessLunch businessLunch = new BusinessLunch(restaurant);
-        System.out.println("商業午餐: ");
-        businessLunch.order();
-
-        FullCombo fullCombo = new FullCombo(restaurant);
-        System.out.println("全餐: ");
-        fullCombo.order();
+        soup.show();
     }
 }
