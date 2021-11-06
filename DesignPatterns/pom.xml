@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Test2</artifactId>
+    <artifactId>DesignPatterns</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.jetbrains</groupId>

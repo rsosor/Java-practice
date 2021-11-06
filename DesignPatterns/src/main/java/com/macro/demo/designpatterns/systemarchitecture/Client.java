@@ -8,6 +8,9 @@ public class Client {
     public static void main(String[] args) {
         DrinkShop drinkShop = new DrinkShop();
 
+        /**
+         * enum 從商品類解析出來，就可以用多型的 Drink
+         */
         Tea tea = (Tea)drinkShop.order("tea", Drink.SugarType.FREE, Drink.IceType.EASY);
         tea.setTeaType(Tea.TeaType.OOLONG);
 
