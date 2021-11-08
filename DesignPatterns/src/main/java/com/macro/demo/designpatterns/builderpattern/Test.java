@@ -20,6 +20,5 @@ public class Test {
                 .buildStorage(new MacBookPro.Storage(8192))
                 .buildKeyboard(new MacBookPro.Keyboard("中文注音"))
                 .build();
-        System.out.println(dreamMacBookPro.toString());
     }
 }
