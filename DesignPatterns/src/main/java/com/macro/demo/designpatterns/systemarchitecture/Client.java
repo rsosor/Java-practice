@@ -2,10 +2,12 @@ package com.macro.demo.designpatterns.systemarchitecture;
 
 import com.macro.demo.designpatterns.systemarchitecture.impl.Coffee;
 import com.macro.demo.designpatterns.systemarchitecture.impl.Tea;
+import org.junit.jupiter.api.Test;
 
 public class Client {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         DrinkShop drinkShop = new DrinkShop();
 
         /**

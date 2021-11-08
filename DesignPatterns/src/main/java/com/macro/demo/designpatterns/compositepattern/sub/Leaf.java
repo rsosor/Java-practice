@@ -17,9 +17,4 @@ public class Leaf extends Component {
     public void remove(Component component) {
         System.out.println("Leaf can't remove component");
     }
-
-    @Override
-    public void display(int depth) {
-        super.display(depth);
-    }
 }

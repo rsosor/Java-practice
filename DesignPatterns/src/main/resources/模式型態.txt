@@ -1,0 +1,51 @@
+建立型模式
+定義
+建立型模式隱藏了這些類別的實體是如何被建立和放在一起，整個系統關於這些物件所知道的，是由抽象類別所定義的介面。
+這樣，建立型模式在建立了什麼、誰建立它、它是怎麼被建立的，以及何時建立這些方面提供了很大的靈活性。
+
+-- Design Pattern by GoF [大話設計模式 p.454]
+
+
+下面這五種模式我們稱為建立型模式(建造型)，使用這些模式我們希望達到不自己創建物件的效果(在程式碼中不使用 new)
+把創建的過程封裝起來，從而達到單一實例、提升效能、容易擴充···等等的好處。
+
+單例模式 (獨體模式) ( Singleton Pattern )
+工廠方法模式 ( Factory Method Pattern )
+抽象工廠模式 ( Abstract Factory Pattern )
+建造者模式 ( Builder Pattern )
+原形模式 ( Prototype Pattern)
+
+
+結構型模式
+定義
+結構型模式整理既有的類別，並且將這些類別做一些適當的轉換，最終達到更容易使用、更加靈活、變化他們的表示···等等的效果。
+
+轉接器模式 ( Adapter Pattern )
+橋接模式 ( Bridge Pattern )
+組合模式 ( Composite Pattern )
+裝飾模式 ( Decorator Pattern )
+外觀模式 ( Facade Pattern )
+享元模式 ( Flyweight Pattern )
+代理模式 ( Proxy Pattern )
+
+
+行為型模式
+定義
+在軟體工程中， 行為型模式為設計模式的一種類型，用來識別對象之間的常用交流模式並加以實現。如此，可在進行這些交流活動時增強彈性。
+
+-- by wikipedia
+
+行為模式是根據某些常出現的行為交流( behavior communication )設計出來的模式，在現實生活中會經常碰到類似的行為模式
+所以根據這些交流設計出對應的程式模型加以實現，擁有程式擴充、設計上的彈性，因此對於這些固定會出現的幾種模式，大家有了一種固定的寫法···。
+
+觀察者模式 ( Observer Pattern )
+範本方法模式 ( TemplateMethod Pattern )
+命令模式 ( Command Pattern )
+狀態模式 ( State Pattern )
+責任鍊模式 ( Chain of Responsibility Pattern )
+解釋器模式 ( Interpreter Pattern )
+中介者模式 ( Mediator Pattern )
+訪問者模式 ( Visitor Pattern )
+策略模式 ( Strategy Pattern )
+備忘錄模式 ( Memento Pattern )
+迭代器模式 ( Iterator Pattern )

@@ -1,10 +1,12 @@
 package com.macro.demo.designpatterns.eventlistener;
 
 import com.macro.demo.designpatterns.eventlistener.impl.TVSwitchListener;
+import org.junit.jupiter.api.Test;
 
 public class SwitchTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         SwitchManager manager = new SwitchManager();
         manager.addDoorListener(new TVSwitchListener());
 

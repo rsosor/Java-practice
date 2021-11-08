@@ -2,10 +2,12 @@ package com.macro.demo.designpatterns.compositepattern;
 
 import com.macro.demo.designpatterns.compositepattern.sub.Composite;
 import com.macro.demo.designpatterns.compositepattern.sub.Leaf;
+import org.junit.jupiter.api.Test;
 
 public class Client {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         Component big = new Composite("大公司");
 
         Component mid = new Composite("子公司");
