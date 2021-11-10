@@ -4,7 +4,7 @@ import com.macro.rsosor.designpatterns.bridgepattern.impl.Bag;
 import com.macro.rsosor.designpatterns.bridgepattern.impl.Book;
 import com.macro.rsosor.designpatterns.bridgepattern.sub.FewView;
 import com.macro.rsosor.designpatterns.bridgepattern.sub.FullView;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class BridgeTest {
 

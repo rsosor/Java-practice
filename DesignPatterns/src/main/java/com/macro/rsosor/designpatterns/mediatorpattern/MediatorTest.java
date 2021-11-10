@@ -3,7 +3,7 @@ package com.macro.rsosor.designpatterns.mediatorpattern;
 import com.macro.rsosor.designpatterns.mediatorpattern.impl.Boss;
 import com.macro.rsosor.designpatterns.mediatorpattern.impl.PM;
 import com.macro.rsosor.designpatterns.mediatorpattern.impl.Programmer;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class MediatorTest {
 

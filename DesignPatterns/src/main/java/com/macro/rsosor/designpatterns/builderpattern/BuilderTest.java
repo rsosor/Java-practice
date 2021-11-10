@@ -1,7 +1,7 @@
 package com.macro.rsosor.designpatterns.builderpattern;
 
 import com.macro.rsosor.designpatterns.builderpattern.sub.MacBookPro_2021;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class BuilderTest {
 

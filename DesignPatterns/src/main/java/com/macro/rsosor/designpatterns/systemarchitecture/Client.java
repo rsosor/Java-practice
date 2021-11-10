@@ -2,7 +2,7 @@ package com.macro.rsosor.designpatterns.systemarchitecture;
 
 import com.macro.rsosor.designpatterns.systemarchitecture.impl.Coffee;
 import com.macro.rsosor.designpatterns.systemarchitecture.impl.Tea;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class Client {
 

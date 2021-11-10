@@ -2,7 +2,7 @@ package com.macro.rsosor.designpatterns.observerpattern;
 
 import com.macro.rsosor.designpatterns.observerpattern.impl.PodcastA;
 import com.macro.rsosor.designpatterns.observerpattern.impl.Student;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class ObserverTest {
 

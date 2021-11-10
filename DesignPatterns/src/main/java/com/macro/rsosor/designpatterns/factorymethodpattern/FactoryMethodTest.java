@@ -1,7 +1,7 @@
 package com.macro.rsosor.designpatterns.factorymethodpattern;
 
 import com.macro.rsosor.designpatterns.factorymethodpattern.impl.FrenchFriesFactory;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class FactoryMethodTest {
 

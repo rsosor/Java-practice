@@ -1,7 +1,7 @@
 package com.macro.rsosor.designpatterns.eventlistener;
 
 import com.macro.rsosor.designpatterns.eventlistener.impl.TVSwitchListener;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class SwitchTest {
 

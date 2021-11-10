@@ -11,7 +11,6 @@ public class XmlUtils {
     public static void main(String[] args) throws ConfigurationException {
 
         Configurations configs = new Configurations();
-
         XMLConfiguration config = configs.xml("my.xml");
 
         // 使用默認的符號定義創建一個表達式引擎

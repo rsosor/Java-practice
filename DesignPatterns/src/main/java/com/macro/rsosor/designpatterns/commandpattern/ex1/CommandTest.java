@@ -3,7 +3,7 @@ package com.macro.rsosor.designpatterns.commandpattern.ex1;
 import com.macro.rsosor.designpatterns.commandpattern.ex1.sub.Brighter;
 import com.macro.rsosor.designpatterns.commandpattern.ex1.sub.Darker;
 import com.macro.rsosor.designpatterns.commandpattern.ex1.sub.TurnOn;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class CommandTest {
 

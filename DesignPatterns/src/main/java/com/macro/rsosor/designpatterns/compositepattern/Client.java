@@ -2,7 +2,7 @@ package com.macro.rsosor.designpatterns.compositepattern;
 
 import com.macro.rsosor.designpatterns.compositepattern.sub.Composite;
 import com.macro.rsosor.designpatterns.compositepattern.sub.Leaf;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class Client {
 

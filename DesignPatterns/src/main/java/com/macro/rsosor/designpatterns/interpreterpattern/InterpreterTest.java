@@ -2,7 +2,7 @@ package com.macro.rsosor.designpatterns.interpreterpattern;
 
 import com.macro.rsosor.designpatterns.interpreterpattern.sub.NonTerminalExpression;
 import com.macro.rsosor.designpatterns.interpreterpattern.sub.TerminalExpression;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class InterpreterTest {
 

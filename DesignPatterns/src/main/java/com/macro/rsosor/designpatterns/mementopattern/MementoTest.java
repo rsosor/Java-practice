@@ -1,6 +1,6 @@
 package com.macro.rsosor.designpatterns.mementopattern;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class MementoTest {
 

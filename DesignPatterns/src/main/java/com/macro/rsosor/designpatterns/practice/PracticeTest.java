@@ -1,7 +1,7 @@
 package com.macro.rsosor.designpatterns.practice;
 
 import com.macro.rsosor.designpatterns.practice.sub.*;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class PracticeTest {
 

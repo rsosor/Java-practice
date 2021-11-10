@@ -1,7 +1,7 @@
 package com.macro.rsosor.designpatterns.adapterpattern;
 
 import com.macro.rsosor.designpatterns.adapterpattern.sub.ManTranslator;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class AdapterTest {
 
