@@ -1,0 +1,113 @@
+（commons-configuration2）
+除支持佔位符，還支持取值一些內置的變量。如環境變量、環境屬性。
+它 內置 三個屬性前缀
+1. sys: 對應我們熟悉的 systemProperties
+2. env: 對應我們熟悉的 environmentProperties
+3. const: The const prefix indicates that a variable is to be interpreted as a constant member field of a class
+(i.e. a field with the static final modifiers.) The name of the variable must be of the form
+    <full qualified class name>.<field name> The specified class will be loaded and the value of this field will be obtained.
+
+使用案例：
+user.file = ${sys:user.home}/settings.xml
+java.home = ${env:JAVA_HOME}
+
+# 可以理解為直接引用某個類的靜態常量
+action.key = ${const:java.awt.event.KeyEvent.VK_CANCEL}
+________________________________________________________________________________________________________________________
+IDEA 默認的項目結構: .java 存於 src, .class 存於 target。
+
+在本地和伺服器中讀取文件的方式有所不同：
+(1) 本地讀取資源文件
+    Java 類中需要讀取 resources 中的配置文件，可以採用文件(File)方式：
+    File file = new File("src/main/resources/application.yaml");
+    InputStream in = new FileInputStream(file);
+
+原因：JavaWeb 項目部署伺服器中，會將項目打包成 Jar 或 War 包，此時就不會存在 src/main/resources 目錄
+    JVM 會在編譯項目時，主動將 java 文件編譯成 class文件 和 resources 下的靜態文件放在 target/classes 目錄下。
+理解：Java 文件只有編譯成 class 文件才會被 JVM 執行，本地執行時當前項目即為 Java 進程的工作空間，雖然 class文件 在 target/classes
+    目錄，但是 target/classes 不是 class文件 運行目錄只是存放目錄，運行目錄還是在 IDEA 的模塊下，所以運行時會找到 src/main/resources 資源文件！
+
+(2) 伺服器(Tomcat)資源文件
+    當部署到 Tomcat 中時，上述則會拋出異常 FileNotFoundException。
+
+原因：文件的路徑變到頂層 classes 下，這是 Maven Web 工程決定的。主程式放 src/main/java，資源放 src/main/resources，當構建 jar 或 war
+    包時，JVM 會自動編譯 java 為 class 文件放在 target/classes，resources 會原封不動拷貝一份到 target/classes。
+
+方式一: 此時採用 流(Stream) 的方式讀取，並通過 JDK 中 Properties 或 YamlReader 等類加載，可以方便的獲取到配置文件中的信息。
+
+InputStream in = this.getClass().getResourceAsStream("/application.properties");
+Properties properties = new Properties();
+properties.load(in);
+properties.getProperty("name");
+
+1) InputStream inStream = Properties.class.getResourceAsStream("application.properties");
+2) inStream = Properties.class.getResourceAsStream("/application.properties");
+3) inStream = Properties.class.getClassLoader().getResourceAsStream("application.properties");
+
+１)
+1,2用 Class 對象去加載，3用 ClassLoader 對象去加載資源文件
+Class 可加載資源文件是因為 Class 類封裝的 ClassLoader 的 getResourceAsStream() 方法，從 Class 類中的源碼可看出
+理由：之所以這樣無疑是方便客戶端的調用，省的每次獲取 ClassLoader 才能加載資源文件的麻煩。
+
+２)
+類加載器就是用來加載 java 類的，負責把 class 文件加載進內存中，並創建一個 java.lang.Class 類的一個實例，並且每個類的類加載器都不同
+getResourceAsStream(path) 用來獲取資源的，因為這是 ClassLoader 獲取資源，而類加載器默認是從 classPath 下獲取資源的，因為這下面有 class
+文件。所以這段代碼意思是通過類加載器在 classPath 目錄下獲取資源，並且是以流的形式。
+在 Java 中所有的類都是通過加載器加載到虛擬機的中的，而且類加載器之間存在父子關係，不同的子加載器的類型之間是無法訪問的(雖然它們都被放在方法區中)
+所以在這裡通過當前類的加載器來加載資源也就是保證是和類類型是同一個加載器加載的。
+
+３)
+class.getClassLoader().getResourceAsStream(): 默認從 target/classpath 中找文件，使用 相對(relative)路徑 name 不能帶 "/"。
+inStream = Properties.class.getClassLoader().getResourceAsStream("applications");
+
+class.getResourceAsStream(): 絕對(absolute)路徑，name 需要加 "/" (代表 classpath)。
+inStream = Properties.class.getResourceAsStream("/application.properties");
+
+方法二: 採用 Spring 註解
+但需要將配置文件放到 Spring 配置文件中掃描後，才能將配置信息放入上下文。
+
+<context:component-scan base-package="com.xxx.service"/>
+<context:property-placeholder location="classpath:properties/xxx/properties" ignore-unresolvable="true"/>
+
+然後在程式中可以使用 @Value 進行讀取 properties 文件中的屬性值：
+@Value("${xxxt.server}")
+private static String serverUrl;
+
+方法三: 採用 Spring 配置
+也可以在 Spring 配置文件中讀取屬性值，賦予類成員變量。
+  <?xml version="1.0" encoding="UTF-8"?>
+  <beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+      <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+          <property name="location" value="classpath:properties/xxx.properties"/>
+      </bean>
+
+     <bean id="service" class="com.xxxx.service.ServiceImpl">
+         <property name="serverUrl" value="${xxxt.server}" />
+     </bean>
+
+ </beans>
+
+重點：SpringBoot 項目啟動後，動態的讀取類路徑下文件數據
+讀取 jar 包中根路徑下的 HelloServiceEncryptFile.txt 文件，重新寫入到根路徑下的 com.study/service 路徑下。
+InputStream inputStream = EncryptUtil.class.getResourceAsStream("/HelloServiceEncryptFile.txt");
+BufferedRead reader = new BufferedReader(new InputStreamReader(inputStream);
+String line = reader.readLine();
+
+// 根據類路徑下的文件路徑
+File path = new File(ResourceUtils.getURL("classpath:").getPath());
+if (!path.exists()) {
+    path = new File("");
+}
+log.info("path = {}", path.getAbsolutePath());
+File upload = new File(path.getAbsolutePath(), "com/study/service");
+if (!upload.exists()) {
+    upload.mkdirs();
+}
+FileOutputStream fos = new FileOutputStream(upload.getAbsolutePath() + File.separator + "hello.txt");
+IOUtil.copy(inputStream, fos);
+fos.close();
+inputStream.close();
