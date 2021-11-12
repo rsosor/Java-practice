@@ -40,9 +40,9 @@ Properties properties = new Properties();
 properties.load(in);
 properties.getProperty("name");
 
-1) InputStream inStream = Properties.class.getResourceAsStream("application.properties");
-2) inStream = Properties.class.getResourceAsStream("/application.properties");
-3) inStream = Properties.class.getClassLoader().getResourceAsStream("application.properties");
+1) InputStream inputStream = Properties.class.getResourceAsStream("application.properties");
+2) inputStream = Properties.class.getResourceAsStream("/application.properties");
+3) inputStream = Properties.class.getClassLoader().getResourceAsStream("application.properties");
 
 １)
 1,2用 Class 對象去加載，3用 ClassLoader 對象去加載資源文件
@@ -58,10 +58,10 @@ getResourceAsStream(path) 用來獲取資源的，因為這是 ClassLoader 獲�
 
 ３)
 class.getClassLoader().getResourceAsStream(): 默認從 target/classpath 中找文件，使用 相對(relative)路徑 name 不能帶 "/"。
-inStream = Properties.class.getClassLoader().getResourceAsStream("applications");
+inputStream = Properties.class.getClassLoader().getResourceAsStream("applications");
 
 class.getResourceAsStream(): 絕對(absolute)路徑，name 需要加 "/" (代表 classpath)。
-inStream = Properties.class.getResourceAsStream("/application.properties");
+inputStream = Properties.class.getResourceAsStream("/application.properties");
 
 方法二: 採用 Spring 註解
 但需要將配置文件放到 Spring 配置文件中掃描後，才能將配置信息放入上下文。
