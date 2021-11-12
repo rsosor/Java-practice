@@ -1,7 +1,7 @@
 package com.macro.rsosor.designpatterns.chainofresponsibilitypattern;
 
 import com.macro.rsosor.designpatterns.chainofresponsibilitypattern.sub.Manager;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ChainOfResponsibilityTest {
 

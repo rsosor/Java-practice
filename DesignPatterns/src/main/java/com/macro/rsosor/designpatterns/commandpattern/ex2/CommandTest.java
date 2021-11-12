@@ -3,7 +3,7 @@ package com.macro.rsosor.designpatterns.commandpattern.ex2;
 import com.macro.rsosor.designpatterns.commandpattern.ex2.sub.StraightDown;
 import com.macro.rsosor.designpatterns.commandpattern.ex2.sub.TurnLeft;
 import com.macro.rsosor.designpatterns.commandpattern.ex2.sub.TurnRight;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class CommandTest {
 

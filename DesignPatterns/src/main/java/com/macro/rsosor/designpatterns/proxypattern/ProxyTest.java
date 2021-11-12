@@ -2,7 +2,7 @@ package com.macro.rsosor.designpatterns.proxypattern;
 
 import com.macro.rsosor.designpatterns.proxypattern.impl.EstateAgent;
 import com.macro.rsosor.designpatterns.proxypattern.impl.LittleEngineer;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ProxyTest {
 

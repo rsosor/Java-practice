@@ -5,6 +5,7 @@ import org.apache.commons.configuration2.PropertiesConfiguration;
 import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder;
 import org.apache.commons.configuration2.builder.fluent.Configurations;
 import org.apache.commons.configuration2.ex.ConfigurationException;
+import org.junit.Test;
 
 import java.util.Iterator;
 
@@ -17,7 +18,8 @@ import java.util.Iterator;
  */
 public class PropertiesUtils {
 
-    public static void main(String[] args) throws ConfigurationException {
+    @Test
+    public void test() throws ConfigurationException {
 
         Configurations configs = new Configurations();
 

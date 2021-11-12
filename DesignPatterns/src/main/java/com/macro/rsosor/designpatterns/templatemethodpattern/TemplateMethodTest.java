@@ -1,7 +1,7 @@
 package com.macro.rsosor.designpatterns.templatemethodpattern;
 
 import com.macro.rsosor.designpatterns.templatemethodpattern.sub.SoftwareManager;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class TemplateMethodTest {
 

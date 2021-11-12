@@ -2,7 +2,7 @@ package com.macro.rsosor.designpatterns.prototypepattern;
 
 import com.macro.rsosor.designpatterns.prototypepattern.sub.Sensor;
 import org.junit.jupiter.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class PrototypeTest {
 

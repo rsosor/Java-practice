@@ -1,7 +1,7 @@
 package com.macro.rsosor.designpatterns.flyweightpattern;
 
 import com.macro.rsosor.designpatterns.flyweightpattern.sub.MacBook;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class FlyWeightTest {
 

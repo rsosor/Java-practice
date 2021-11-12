@@ -1,7 +1,7 @@
 package com.macro.rsosor.designpatterns.iteratorpattern;
 
 import com.macro.rsosor.designpatterns.iteratorpattern.impl.CompanyA;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class IteratorTest {
 

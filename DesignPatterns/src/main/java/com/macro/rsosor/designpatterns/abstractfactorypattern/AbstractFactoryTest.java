@@ -2,7 +2,7 @@ package com.macro.rsosor.designpatterns.abstractfactorypattern;
 
 import com.macro.rsosor.designpatterns.abstractfactorypattern.sub.JeepFactory;
 import com.macro.rsosor.designpatterns.abstractfactorypattern.sub.SUVFactory;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class AbstractFactoryTest {
 

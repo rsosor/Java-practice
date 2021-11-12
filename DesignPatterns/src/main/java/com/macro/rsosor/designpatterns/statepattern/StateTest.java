@@ -2,7 +2,7 @@ package com.macro.rsosor.designpatterns.statepattern;
 
 import com.macro.rsosor.designpatterns.statepattern.sub.British;
 import com.macro.rsosor.designpatterns.statepattern.sub.Metric;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class StateTest {
 

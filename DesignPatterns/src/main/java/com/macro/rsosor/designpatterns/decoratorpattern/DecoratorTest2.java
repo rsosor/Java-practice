@@ -1,7 +1,7 @@
 package com.macro.rsosor.designpatterns.decoratorpattern;
 
 import com.macro.rsosor.designpatterns.decoratorpattern.sub.sub.SimpleSet;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class DecoratorTest2 {
 

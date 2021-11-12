@@ -4,7 +4,7 @@ import com.macro.rsosor.designpatterns.visitorpattern.impl.Man;
 import com.macro.rsosor.designpatterns.visitorpattern.impl.Woman;
 import com.macro.rsosor.designpatterns.visitorpattern.sub.AirQuality;
 import com.macro.rsosor.designpatterns.visitorpattern.sub.Temperature;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class VisitorTest {
 

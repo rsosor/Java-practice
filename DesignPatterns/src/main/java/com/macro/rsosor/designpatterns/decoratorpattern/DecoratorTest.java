@@ -3,7 +3,7 @@ package com.macro.rsosor.designpatterns.decoratorpattern;
 import com.macro.rsosor.designpatterns.decoratorpattern.sub.sub.Drink;
 import com.macro.rsosor.designpatterns.decoratorpattern.sub.sub.MainMeal;
 import com.macro.rsosor.designpatterns.decoratorpattern.sub.sub.Soup;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class DecoratorTest {
 

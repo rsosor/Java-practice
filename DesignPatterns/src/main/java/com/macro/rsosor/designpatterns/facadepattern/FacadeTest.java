@@ -1,6 +1,6 @@
 package com.macro.rsosor.designpatterns.facadepattern;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class FacadeTest {
 

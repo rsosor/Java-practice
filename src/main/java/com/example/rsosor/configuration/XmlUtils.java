@@ -5,12 +5,15 @@ import org.apache.commons.configuration2.builder.fluent.Configurations;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.apache.commons.configuration2.tree.DefaultExpressionEngine;
 import org.apache.commons.configuration2.tree.DefaultExpressionEngineSymbols;
+import org.junit.Test;
 
 public class XmlUtils {
 
-    public static void main(String[] args) throws ConfigurationException {
+    @Test
+    public void test() throws ConfigurationException {
 
         Configurations configs = new Configurations();
+
         XMLConfiguration config = configs.xml("my.xml");
 
         // 使用默認的符號定義創建一個表達式引擎

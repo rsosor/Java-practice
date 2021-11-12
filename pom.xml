@@ -5,6 +5,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>DesignPatterns</module>
+		<module>practice</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -13,9 +14,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>rsosor</artifactId>
+	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>rsosor</name>
+	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>

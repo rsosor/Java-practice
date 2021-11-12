@@ -3,7 +3,7 @@ package com.macro.rsosor.designpatterns.singletonpattern.singletonfactory;
 import com.macro.rsosor.designpatterns.singletonpattern.singletonfactory.impl.SingletonFactory;
 import com.macro.rsosor.designpatterns.singletonpattern.singletonfactory.sub.Cola;
 import com.macro.rsosor.designpatterns.singletonpattern.singletonfactory.sub.Hamburger;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class SingletonFactoryTest {
 
