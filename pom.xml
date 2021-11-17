@@ -7,6 +7,7 @@
 		<module>DesignPatterns</module>
 		<module>electronic-commerce</module>
 		<module>features-test</module>
+		<module>practice</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
