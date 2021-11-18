@@ -1,4 +1,4 @@
-package com.rsosor.example.eventlistener;
+package com.rsosor.featurestest.eventlistener;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;

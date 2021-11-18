@@ -1,6 +1,6 @@
-package com.rsosor.example.controller;
+package com.rsosor.featurestest.controller;
 
-import com.rsosor.example.eventlistener.DemoPublisher;
+import com.rsosor.featurestest.eventlistener.DemoPublisher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

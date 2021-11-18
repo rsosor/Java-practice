@@ -1,4 +1,4 @@
-package com.rsosor.example.io;
+package com.rsosor.practice.io;
 
 import java.io.*;
 

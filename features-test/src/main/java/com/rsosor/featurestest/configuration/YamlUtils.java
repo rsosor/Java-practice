@@ -1,4 +1,4 @@
-package com.rsosor.example.configuration;
+package com.rsosor.featurestest.configuration;
 
 import org.apache.commons.configuration2.YAMLConfiguration;
 import org.junit.Test;

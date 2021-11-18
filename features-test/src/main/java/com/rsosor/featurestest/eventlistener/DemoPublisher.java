@@ -1,4 +1,4 @@
-package com.rsosor.example.eventlistener;
+package com.rsosor.featurestest.eventlistener;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;

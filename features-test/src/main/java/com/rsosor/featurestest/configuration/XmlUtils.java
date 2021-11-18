@@ -1,4 +1,4 @@
-package com.rsosor.example.configuration;
+package com.rsosor.featurestest.configuration;
 
 import org.apache.commons.configuration2.XMLConfiguration;
 import org.apache.commons.configuration2.builder.fluent.Configurations;

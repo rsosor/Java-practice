@@ -1,4 +1,4 @@
-package com.rsosor.example.configuration;
+package com.rsosor.featurestest.configuration;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
