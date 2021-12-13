@@ -1,5 +1,7 @@
-package com.rsosor.practice.demo;
+package com.rsosor.practice.utils;
 
+import com.rsosor.practice.enums.ActiveState;
+import com.rsosor.practice.utils.Issue;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.Test;
 

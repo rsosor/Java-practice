@@ -1,5 +1,8 @@
-package com.rsosor.practice.demo;
+package com.rsosor.practice.utils;
 
+import com.rsosor.practice.enums.ActiveState;
+import com.rsosor.practice.utils.Issue;
+import com.rsosor.practice.utils.IssueAssert;
 import org.junit.jupiter.api.Test;
 
 public class IssueTest2 {

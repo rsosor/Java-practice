@@ -1,5 +1,6 @@
-package com.rsosor.practice.demo;
+package com.rsosor.practice.utils;
 
+import com.rsosor.practice.enums.ActiveState;
 import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.api.SoftAssertions;
 

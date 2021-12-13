@@ -1,4 +1,4 @@
-package com.rsosor.practice.demo;
+package com.rsosor.practice.enums;
 
 public enum ResultState {
 

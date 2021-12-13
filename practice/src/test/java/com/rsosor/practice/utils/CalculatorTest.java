@@ -1,5 +1,6 @@
-package com.rsosor.practice.demo;
+package com.rsosor.practice.utils;
 
+import com.rsosor.practice.utils.Calculator;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 

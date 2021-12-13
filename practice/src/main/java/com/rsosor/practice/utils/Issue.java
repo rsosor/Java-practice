@@ -1,4 +1,7 @@
-package com.rsosor.practice.demo;
+package com.rsosor.practice.utils;
+
+import com.rsosor.practice.enums.ActiveState;
+import com.rsosor.practice.enums.ResultState;
 
 public class Issue {
 
