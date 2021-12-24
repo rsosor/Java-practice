@@ -9,6 +9,7 @@
 		<module>features-test</module>
 		<module>practice</module>
         <module>auth</module>
+        <module>javase</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

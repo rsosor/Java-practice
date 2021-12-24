@@ -1,4 +1,4 @@
-package com.rsosor.practice.io;
+package com.rsosor.javase.io;
 
 import java.io.*;
 
@@ -9,6 +9,7 @@ import java.io.*;
  * @date 2021/9/12
  */
 public class UpDownLoad {
+    public String takeMe = "take me";
     public static void main(String[] args) {
         // 原始檔與目標檔案
         File sourceFile = new File("D:/", "test.txt");
