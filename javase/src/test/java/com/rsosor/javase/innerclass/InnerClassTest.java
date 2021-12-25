@@ -7,6 +7,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class InnerClassTest {
 
@@ -100,20 +104,20 @@ public class InnerClassTest {
      */
     @Test
     public void anonymousInnerClass3() {
-        static void go() {
-            Bar b = new Bar();
-            b.doStuff(new IFoo() {
-                @Override
-                public void foo() {
-                    System.out.println("foo");
-                }
-            });
-        }
+        Bar b = new Bar();
+        b.doStuff(new IFoo() {
+            @Override
+            public void foo() {
+                System.out.println("foo");
+            }
+        });
     }
 
     @Test
     public void staticInnerClass() {
-
+        StaticInnerClass.Inner inner = new StaticInnerClass.Inner();
+        inner.test();
+        StaticInnerClass.Inner.test3();
     }
 
     @Test
@@ -123,5 +127,11 @@ public class InnerClassTest {
         MemberInnerClass.Inner.print();
         System.out.println(MemberInnerClass.Inner.i);
         System.out.println();
+    }
+
+    @Test
+    public void hash() {
+        Map map = new HashMap();
+        map.node
     }
 }

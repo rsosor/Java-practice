@@ -10,4 +10,15 @@ public class AnonymousInnerClass {
      *
      * 便於編寫 線程和事件驅動的程式
      */
+
+    // 參數式匿名內部類
+    static void go() {
+        Bar b = new Bar();
+        b.doStuff(new IFoo() {
+            @Override
+            public void foo() {
+                System.out.println("參數式匿名內部類");
+            }
+        });
+    }
 }
