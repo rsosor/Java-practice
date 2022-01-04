@@ -7,10 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
 public class InnerClassTest {
 
@@ -127,11 +123,5 @@ public class InnerClassTest {
         MemberInnerClass.Inner.print();
         System.out.println(MemberInnerClass.Inner.i);
         System.out.println();
-    }
-
-    @Test
-    public void hash() {
-        Map map = new HashMap();
-        map.node
     }
 }
