@@ -3,6 +3,7 @@ package com.rsosor.javase.lambda;
 /**
  * byLength 參考的實例沒有狀態問題，因而適合宣告為 static
  * 要在多個類別間共用，就設定為 public static
+ * 下面將字串排序時可能的方式都定義出來了
  *
  * @author RsosoR
  * @date 2022/1/4
