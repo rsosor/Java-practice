@@ -18,8 +18,8 @@ public class ConsReference {
      */
     static <T, R> List<R> map(List<T> list, Function<T, R> mapper) {
         var mapped = new ArrayList<R>();
-        for (var i = 0; i < list.size(); i++) {
-            mapped.add(mapper.apply(list.get(i)));
+        for (T t : list) {
+            mapped.add(mapper.apply(t));
         }
         return mapped;
     }
@@ -31,7 +31,7 @@ public class ConsReference {
      * 此範例也示範了前面介紹的方法參考，forEach() 接受 Consumer 實例，而 Consumer 實作直接參考了 System.out 的 println()
      */
     public static void main(String[] args) {
-        var names = List.of(args);
+        var names = List.of("Joe");
         // var persons = map(names, name -> new Person(name));
         var persons = map(names, Person::new);
         persons.forEach(System.out::println);
