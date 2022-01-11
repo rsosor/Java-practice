@@ -67,25 +67,22 @@ public class GenericsTest {
         class RedApple extends Apple {}
         class GreenApple extends Apple {}
 
-        Plate<? extends Fruit> p = new Plate<Apple>(new Apple());
+        Plate<? extends Fruit> producer = new Plate<Apple>(new Apple());
 
-        // p.set(new Fruit()); error
-        // p.set(new Apple()); error
+        // producer.set(new Fruit()); error
+        // producer.set(new Apple()); error
 
-        Fruit newFruit1 = p.get();
-        Object newFruit2 = p.get();
-        // Apple newFruit3 = p.get(); error
+        Fruit newFruit1 = producer.get();
+        Object newFruit2 = producer.get();
+        // Apple newFruit3 = producer.get(); error
 
-        Plate<? super Fruit> p2 = new Plate<Food>(new Apple());
+        Plate<? super Fruit> consumer = new Plate<Food>(new Apple());
 
-        p2.set(new Fruit());
-        p2.set(new Apple());
+        consumer.set(new Fruit());
+        consumer.set(new Apple());
 
-        // Fruit newFruit_1 = p2.get(); error
-        Object newFruit_2 = p2.get();
-        // Apple newFruit_3 = p2.get(); error
-
-
-        // Plate<? super Fruit> p2 = new Plate<Apple>(new Apple());
+        // Fruit newFruit_1 = consumer.get(); error
+        Object newFruit_2 = consumer.get();
+        // Apple newFruit_3 = consumer.get(); error
     }
 }
