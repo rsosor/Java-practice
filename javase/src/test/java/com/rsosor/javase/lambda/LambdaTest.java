@@ -1,5 +1,10 @@
 package com.rsosor.javase.lambda;
 
+import com.rsosor.javase.lambda.defaultmethod.ISome;
+import com.rsosor.javase.lambda.defaultmethod.SomeImpl;
+import com.rsosor.javase.lambda.discriminateversionofimpl.multipleinheritance3.ISub;
+import com.rsosor.javase.lambda.discriminateversionofimpl.multipleinheritance3.SubClass;
+import com.rsosor.javase.lambda.discriminateversionofimpl.multipleinheritance3.SuperClass;
 import com.rsosor.javase.lambda.staticmethod.StringOrder;
 import org.junit.Test;
 import java.util.*;
@@ -134,6 +139,31 @@ public class LambdaTest {
         out.println(Arrays.toString(names));
         Arrays.sort(names, String::compareToIgnoreCase);
         out.println(Arrays.toString(names));
+    }
+
+    @Test
+    public void defaultMethod() {
+        ISome some = new SomeImpl();
+        some.doIt();
+    }
+
+    /**
+     * JDK 8 之前不讓介面擁有預設方法是有原因的，因為實作介面是廣義的多重繼承，介面沒有實作時，在判斷繼承而來的方法來源時就會單純許多
+     * JDK 8 以後允許介面有預設實作，更強大的威力伴隨更多的複雜度，得留意採用的是哪個方法版本
+     * 簡單來說，類別的定義 優先於 介面的定義，若有 重新定義，就以 重新定義 為主，必要時使用 介面 與 super 指定預設方法
+     */
+    @Test
+    public void discriminateVersionOfImpl() {
+        // 都是使用 SuperClass 的 Foo()
+
+        SubClass subClass = new SubClass();
+        subClass.Foo();
+
+        SuperClass superClass = new SubClass();
+        superClass.Foo();
+
+        ISub sub = new SubClass();
+        sub.Foo();
     }
 }
 
