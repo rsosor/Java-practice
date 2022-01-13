@@ -4,12 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<modules>
+		<module>auth</module>
 		<module>DesignPatterns</module>
-		<module>electronic-commerce</module>
 		<module>features-test</module>
+		<module>javase</module>
 		<module>practice</module>
-        <module>auth</module>
-        <module>javase</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
